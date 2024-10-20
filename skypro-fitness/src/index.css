@@ -2,59 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html, body {
+    @apply w-full h-full font-sans bg-light-gray m-0 p-0 box-border;
+  }
+
+  #root {
+    @apply max-w-6xl flex content-center font-normal my-0 mx-auto py-8 px-0;
+  }
+
+  h1 {
+    @apply text-5xl font-semibold text-black;
+  }
+
+  a {
+    @apply no-underline cursor-pointer;
+  }
+
+  ul li {
+    @apply list-none;
+  }
+}
+
 @layer components {
   .btn-primary {
     @apply rounded-3xl px-6 py-4 text-lg text-black font-normal bg-green hover:bg-light-green cursor-pointer;
   }
 }
-
-:root {
-  font-family: Roboto, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255 255 255 / 87%);
-  background: #F7F7F7;
-  font-synthesis: none;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    font-family: Roboto, sans-serif;
-    background-color: #F7F7F7,
-}
-
-a,
-a:visited,
-span {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-ul li {
-    list-style: none;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-
