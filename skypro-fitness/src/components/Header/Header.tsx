@@ -3,11 +3,11 @@ function Header() {
   
     return (
       <div className="container mx-auto">
-        <div className="h-50 flex flex-row items-center place-content-between mb-4">
+        <div className="h-50 flex flex-row items-center place-content-between mb-3">
           <img src="/img/logo.png" className="w-55" />
   
           {!isAuth && (
-            <button className="bg-green w-26 h-13 text-black hover:bg-light-green">
+            <button className="btn-primary w-26 h-13">
               Войти
             </button>
           )}

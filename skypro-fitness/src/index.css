@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-primary {
+    @apply rounded-3xl px-6 py-4 text-lg text-black font-normal bg-green hover:bg-light-green cursor-pointer;
+  }
+}
+
 :root {
   font-family: Roboto, sans-serif;
   line-height: 1.5;
@@ -51,17 +57,4 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 46px;
-  padding: 0.6em 1.2em;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: inherit;
-  background-color: #BCEC30;
-  cursor: pointer;
-}
-
-button:hover {
-  border-color: #646cff;
-}
 
