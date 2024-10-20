@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className="container">
       <div className="h-50 flex flex-row items-center place-content-between mb-3">
-        <img src="/img/logo.png" className="h-8 w-52" />
+        <img src="/img/logo.png" className="h-[35px] w-[220px]" />
 
         {!isAuth && (
           <button className="btn-primary md:w-26 h-9 md:h-13">Войти</button>
