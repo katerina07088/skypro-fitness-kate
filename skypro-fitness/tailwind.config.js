@@ -5,8 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'yoga': "url('/public/yogapic.png')",
+        'vector':"url('/public/vector.png')",
+    },
   },
   plugins: [],
 }
-
+}
