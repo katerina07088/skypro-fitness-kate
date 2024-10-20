@@ -2,14 +2,12 @@ function Header() {
   const isAuth = false;
 
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <div className="h-50 flex flex-row items-center place-content-between mb-3">
-        <img src="/img/logo.png" className="w-55" />
+        <img src="/img/logo.png" className="h-8 w-52" />
 
         {!isAuth && (
-          <button className="btn-primary md:w-26 md:h-13">
-            Войти
-          </button>
+          <button className="btn-primary md:w-26 h-9 md:h-13">Войти</button>
         )}
 
         {isAuth && (
@@ -19,9 +17,8 @@ function Header() {
             <img src="/img/rectangle.png" className="w-4 h-3 "></img>
           </div>
         )}
-
       </div>
-      <p className="invisible md:visible md:text-lg/5 md:font-normal  md:text-gray ">
+      <p className="hidden md:block md:text-lg/5 md:font-normal  md:text-gray ">
         Онлайн-тренировки для занятий дома
       </p>
     </div>

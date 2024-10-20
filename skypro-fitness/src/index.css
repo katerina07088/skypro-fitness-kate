@@ -6,13 +6,13 @@
   html, body {
     @apply w-full h-full font-sans bg-light-gray m-0 p-0 box-border;
   }
-
+  
   #root {
-    @apply max-w-80 sm:max-w-3xl lg:max-w-6xl flex content-center font-normal my-0 mx-auto py-8 px-0;
+    @apply max-w-80 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl font-normal my-0 mx-auto py-8 px-0;
   }
 
   h1 {
-    @apply text-2xl lg:text-5xl font-semibold text-black;
+    @apply text-3xl md:text-6xl font-medium text-black;
   }
 
   a {
@@ -26,7 +26,6 @@
 
 @layer components {
   .btn-primary {
-    @apply rounded-3xl px-4 md:px-6 py-2 md:py-4 text-lg text-black font-normal bg-green hover:bg-light-green cursor-pointer;
+    @apply rounded-3xl px-4 md:px-6 py-1 text-lg text-black font-normal bg-green hover:bg-light-green cursor-pointer;
   }
-
 }
