@@ -8,11 +8,11 @@
   }
 
   #root {
-    @apply max-w-6xl flex content-center font-normal my-0 mx-auto py-8 px-0;
+    @apply max-w-80 sm:max-w-3xl lg:max-w-6xl flex content-center font-normal my-0 mx-auto py-8 px-0;
   }
 
   h1 {
-    @apply text-5xl font-semibold text-black;
+    @apply text-2xl lg:text-5xl font-semibold text-black;
   }
 
   a {
@@ -26,6 +26,7 @@
 
 @layer components {
   .btn-primary {
-    @apply rounded-3xl px-6 py-4 text-lg text-black font-normal bg-green hover:bg-light-green cursor-pointer;
+    @apply rounded-3xl px-4 md:px-6 py-2 md:py-4 text-lg text-black font-normal bg-green hover:bg-light-green cursor-pointer;
   }
+
 }
