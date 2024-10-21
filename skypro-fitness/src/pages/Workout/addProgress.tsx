@@ -1,8 +1,8 @@
-"use client";
+'use client'
 export const AddProgress = () => {
   return (
     <>
-      <div className="flex justify-center content-center w-[426px] h-[595.5px]">
+      <div className="flex justify-center content-center w-[426px] h-[595.5px] z-50">
         <div className="">
           <p>Мой прогресс</p>
           <p>Сколько раз вы сделали наклоны вперед?</p>
