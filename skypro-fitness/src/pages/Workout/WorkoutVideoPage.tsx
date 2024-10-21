@@ -1,8 +1,9 @@
-export default function WorkoutVideoPage() {
-  const addProgress = () => {
-    alert("заполнение пргресса");
+"use client";
+import { Link } from "react-router-dom";
+import { AppRoutes } from "../../lib/appRoutes";
 
-  };
+export default function WorkoutVideoPage() {
+  const addProgress = () => {};
 
   const userProfil = () => {
     alert("переход в профиль пользователя");
@@ -10,7 +11,7 @@ export default function WorkoutVideoPage() {
 
   return (
     <>
-      <div className="bg-slate-50 md: pt-12 pb-48">
+      <div className="bg-bgclr md: pt-12 pb-48">
         <header>
           <div className="flex justify-between">
             <div className="w-44 h-7 cursor-pointer">
@@ -43,8 +44,8 @@ export default function WorkoutVideoPage() {
           </div>
         </header>
         <main className="pt-14">
-          <p className="text-start font-medium md:mb-6 text-6xl">Йога</p>
-          <div className="flex md:flex gap-4 pb-10 text-3xl ">
+          <p className="text-start text-2xl font-medium md:mb-6 md:text-6xl">Йога</p>
+          <div className="gap-2 text-[18px] flex md:flex md:gap-4 pb-10 md:text-3xl ">
             <p className="underline underline-offset-8">Красота и здоровье</p>
             <span>/</span>
             <p className="underline underline-offset-8 ">Йога на каждый день</p>
@@ -53,7 +54,7 @@ export default function WorkoutVideoPage() {
           </div>
           <div>
             <iframe
-              className="w-full rounded-2xl pb-10 flex justify-center md:h-[600px]"
+              className="w-full h-[400px] rounded-2xl pb-10 flex justify-center md:h-[600px]"
               src="https://www.youtube.com/embed/oqe98Dxivns?si=jxDer5vcg4egdkvO"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -61,12 +62,12 @@ export default function WorkoutVideoPage() {
           </div>
           <div className="w-max bg-white rounded-lg drop-shadow-lg px-10 py-10">
             <p className="text-start text-3xl pb-5">Упражнения тренировки 2</p>
-            <div className="flex gap-14">
+            <div className="flex flex-col md:flex-row gap-14">
               <div className="flex flex-col text-start text-lg w-max">
                 <div className="pb-5">
                   <p>Наклоны вперед 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
@@ -74,7 +75,7 @@ export default function WorkoutVideoPage() {
                 <div className="pb-5">
                   <p>Наклоны назад 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
@@ -82,7 +83,7 @@ export default function WorkoutVideoPage() {
                 <div>
                   <p className="w-max">Поднятие ног, согнутых в коленях 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
@@ -92,7 +93,7 @@ export default function WorkoutVideoPage() {
                 <div className="pb-5">
                   <p>Наклоны вперед 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
@@ -100,7 +101,7 @@ export default function WorkoutVideoPage() {
                 <div className="pb-5">
                   <p>Наклоны назад 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
@@ -108,7 +109,7 @@ export default function WorkoutVideoPage() {
                 <div>
                   <p className="w-max">Поднятие ног, согнутых в коленях 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
@@ -118,7 +119,7 @@ export default function WorkoutVideoPage() {
                 <div className="pb-5">
                   <p>Наклоны вперед 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
@@ -126,7 +127,7 @@ export default function WorkoutVideoPage() {
                 <div className="pb-5">
                   <p>Наклоны назад 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
@@ -134,19 +135,21 @@ export default function WorkoutVideoPage() {
                 <div>
                   <p className="w-max">Поднятие ног, согнутых в коленях 0%</p>
                   <progress
-                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-stone-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-sky-500"
+                    className="h-1.5 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-custom [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-lightBlue"
                     max="100"
                     value="50"
                   />
                 </div>
               </div>
             </div>
-            <button
-              onClick={addProgress}
-              className="text-black mt-10 flex pl-12 pr-12 pt-3 pb-3 bg-lime-400 rounded-full"
-            >
-              Заполнить свой прогресс
-            </button>
+            <Link className="flex justify-center md:block" to={AppRoutes.ADDPROGRESS}>
+              <button
+                onClick={addProgress}
+                className="text-black mt-10 flex pl-12 pr-12 pt-3 pb-3 bg-btnbg rounded-full md:hover:scale-[1.05]"
+              >
+                Заполнить свой прогресс
+              </button>
+            </Link>
           </div>
         </main>
       </div>
