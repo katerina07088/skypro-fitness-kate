@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 import { AppRoutes } from "../../lib/appRoutes";
 import { useUser } from "../../hooks/useUser";
@@ -20,7 +20,7 @@ export const Login = () => {
       }, []);
     
     const [formValues, setFormValues] = useState({
-        login: "",
+        email: "",
         password: "",
     });
 
@@ -40,7 +40,7 @@ export const Login = () => {
 
         let hasError = false;
 
-        if (!formValues.login) {
+        if (!formValues.email) {
             setLoginError("Введите логин");
             hasError = true;
         }
@@ -54,7 +54,7 @@ export const Login = () => {
 
         try {
             const response = await loginUser({
-                login: formValues.login,
+                login: formValues.email,
                 password: formValues.password,
             });
 
@@ -74,10 +74,10 @@ export const Login = () => {
           <form onSubmit={onLogin} className="w-full flex flex-col items-center gap-[10px]">
           <div className="flex flex-col w-full mb-4 items-center gap-[10px]">
           <input
-            type="text"
+            type="email"
             placeholder="Логин"
-            name="login"
-            value={formValues.login}
+            name="email"
+            value={formValues.email}
             onChange={onInputChange}
             className={`w-[280px] h-[52px] bg-white border rounded-[8px] p-[16px_18px] ${loginError ? 'border-red-500' : 'border-[#D0CECE]'} text-[#D0CECE]`}
           />
@@ -90,10 +90,20 @@ export const Login = () => {
             value={formValues.password}
             onChange={onInputChange}
             className={`w-[280px] h-[52px] bg-white border rounded-[8px] p-[16px_18px] ${passwordError ? 'border-red-500' : 'border-[#D0CECE]'} text-[#D0CECE]`}
-          />
-          {passwordError && <p className="text-red-500 text-sm">{passwordError}</p>}
+          />          
         </div>
-
+        {passwordError && (
+          <>
+            <p className="text-red-500 text-sm">{passwordError}</p>
+            <Link
+                    className="text-[red]"
+                    to={AppRoutes.RESET}
+                    state={{ email: formValues.email }}
+                  >
+                    Восстановить пароль?
+                  </Link>
+                </>
+                )}
         <div className="mt-[24px] flex flex-col w-full items-center gap-[10px]">
           <button className="bg-[#BCEC30] text-black w-full h-[52px] rounded-[46px] py-[16px] px-[26px] hover:bg-[#C6FF00] border-none active:bg-black active:text-white">
             Войти

@@ -5,5 +5,7 @@ export const AppRoutes = {
     COURSE: "/course",
     WORKOUT: "/workout",
     EXIT: "/exit",
-    NOT_FOUND: "*"
+    NOT_FOUND: "*",
+    RESET: "/reset",
+    NEWPASSWORD:"/newpassword",
   };
