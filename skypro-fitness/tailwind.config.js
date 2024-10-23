@@ -12,8 +12,12 @@ export default {
       custom: '#f7f7f7',
       btnbg: '#BCEC30',
       lightBlue: '#00C1FF',
+      blackRgba: 'rgba(0, 0, 0, 0.54)',
+      inputBorder:"#D0CECE"
     },
-    extend: {},
+    extend: {
+      
+    },
   },
   plugins: [],
 }

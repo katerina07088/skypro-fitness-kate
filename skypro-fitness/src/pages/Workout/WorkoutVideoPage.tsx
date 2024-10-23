@@ -1,9 +1,11 @@
 "use client";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { AppRoutes } from "../../lib/appRoutes";
 
 export default function WorkoutVideoPage() {
-  const addProgress = () => {};
+  const addProgress = () => {
+ 
+  };
 
   const userProfil = () => {
     alert("переход в профиль пользователя");
@@ -11,7 +13,8 @@ export default function WorkoutVideoPage() {
 
   return (
     <>
-      <div className="bg-bgclr md: pt-12 pb-48">
+    <Outlet/>
+      <div className="w-full h-full bg-bgclr md: pt-12 pb-48">
         <header>
           <div className="flex justify-between">
             <div className="w-44 h-7 cursor-pointer">
