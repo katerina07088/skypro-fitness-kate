@@ -66,10 +66,10 @@ export const Login = () => {
         }
     }
 
-
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="bg-white rounded-[30px] w-[360px] h-[425px] p-[40px] flex flex-col items-center gap-[48px] max-h-[80vh]">
+   <div className="flex w-full h-full overflow-x-hidden">
+     <div className="flex fixed inset-0 flex items-center justify-center z-50 ">
+      <div className="flex bg-white rounded-[30px] w-[360px] h-[425px] p-[40px] flex flex-col items-center gap-[48px] mx-auto">
         <img  className="w-[220px] h-[35px] mx-auto" src="public/logoModal.png" alt="logo_modal" />
           <form onSubmit={onLogin} className="w-full flex flex-col items-center gap-[10px]">
           <div className="flex flex-col w-full mb-4 items-center gap-[10px]">
@@ -94,17 +94,19 @@ export const Login = () => {
         </div>
         {passwordError && (
           <>
-            <p className="text-red-500 text-sm">{passwordError}</p>
-            <Link
-                    className="text-[red]"
+            <p className="text-red-500 text-sm">
+            Пароль введен неверно, попробуйте еще раз.{" "}
+                <Link                    
                     to={AppRoutes.RESET}
                     state={{ email: formValues.email }}
+                    className="underline text-red-500 hover:text-red-700"
                   >
                     Восстановить пароль?
-                  </Link>
+                </Link>
+            </p>
                 </>
                 )}
-        <div className="mt-[24px] flex flex-col w-full items-center gap-[10px]">
+         <div className="mt-[24px] flex flex-col w-full items-center gap-[10px]">
           <button className="bg-[#BCEC30] text-black w-full h-[52px] rounded-[46px] py-[16px] px-[26px] hover:bg-[#C6FF00] border-none active:bg-black active:text-white">
             Войти
           </button>
@@ -118,5 +120,6 @@ export const Login = () => {
         </form>
       </div>
     </div>
+   </div>
   )
 };

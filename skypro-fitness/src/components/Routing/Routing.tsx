@@ -22,6 +22,7 @@ export default function Routing() {
         <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPage />} />
         <Route path={AppRoutes.RESET} element={<ResetPage />} />
         <Route path={AppRoutes.NEWPASSWORD} element={<NewPasswordPage />} />
+        <Route path={AppRoutes.REGISTER} element={<RegisterPage />} />
       </Routes>
     </>
   );
