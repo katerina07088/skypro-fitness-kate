@@ -72,7 +72,7 @@ export default function Register() {
                    placeholder:text-[#94a6be] focus:outline-none"
                     type="text"
                     value={formValues.email}
-                    placeholder="Электронная почта"
+                    placeholder="Эл.почта"
                     name="email"
                     onChange={onInputChange}
                     id="first-name"
@@ -82,11 +82,11 @@ export default function Register() {
                     className="h-[52px] w-[280px] bg-white gap-2.5 px-[18px] py-4 rounded-lg border-[0.7px] border-solid border-[rgba(148,166,190,0.4)] mb-2.5 placeholder:font-normal placeholder:text-lg 
                    placeholder:text-[#94a6be] focus:outline-none"
                     type="text"
-                    name="username"
-                    value={formValues.username}
+                    name="password"
+                    value={formValues.password}
                     onChange={onInputChange}
                     id="loginReg"
-                    placeholder="Имя пользователя"
+                    placeholder="Пароль"
                   ></input>
   
                   <input
@@ -97,7 +97,7 @@ export default function Register() {
                     onChange={onInputChange}
                     name="password"
                     id="passwordFirst"
-                    placeholder="Пароль"
+                    placeholder="Повторите пароль"
                   ></input>
                 </div>
   
