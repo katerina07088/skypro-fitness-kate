@@ -1,5 +1,4 @@
-function Header() {
-  const isAuth = false;
+function Header({isAuth} : {isAuth: boolean}) {
 
   return (
     <div className="container">
