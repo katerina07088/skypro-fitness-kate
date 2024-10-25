@@ -5,11 +5,14 @@ export default {
     container: {
       center: true,
     },
+    fontFamily: {
+      "sans": ["Roboto", "sans-serif"],
+    },
     extend: {
       colors: {
-        gray: "#999999",
+        "gray": "#999999",
         "light-gray": "#F7F7F7",
-        green: "#BCEC30",
+        "green": "#BCEC30",
         "light-green": "#C6FF00",
       },
       backgroundImage: {
@@ -18,6 +21,6 @@ export default {
         yogamin: "url('public/img/yogapicmin.png')",
       },
     },
-    plugins: [],
   },
+    plugins: [],
 };
