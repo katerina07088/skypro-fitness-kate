@@ -147,7 +147,7 @@ function Course() {
         </div>
 
         <div className="  md:flex md:flex-row w-full mt-24 rounded-xl shadow-2xl"> 
-        <div className="h-[156px] md:invisible md:">
+        <div className="h-[156px] md:hidden">
           <div className="absolute -z-10 top-[1850px] inset-x-1 ">
             <img
               className=" md:right-6 md:rotate-3"
@@ -156,7 +156,7 @@ function Course() {
             />
           </div>
 
-          <div className="absolute -z-10 top-[1700px] left-[97px] w-[313px] h-[348px] md:invisible md:">
+          <div className="absolute -z-10 top-[1700px] left-[97px] w-[313px] h-[348px] md:hidden">
             <img
               className=" md:h-[542px] md:w-[487px] md:mr-7 md:end-px "
               src="/public/img/addcoursemin.png"
