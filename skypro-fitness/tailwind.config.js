@@ -18,7 +18,9 @@ export default {
       backgroundImage: {
         yoga: "url('/public/img/yogapic.png')",
         vector: "url('/public/img/vector.png')",
+        vectormin: "url('/public/img/vectormin.png')",
         yogamin: "url('/public/img/yogapicmin.png')",
+
       },
     },
   },

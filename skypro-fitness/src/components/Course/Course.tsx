@@ -2,12 +2,13 @@ function Course() {
     return (
       <>
         <div className="container">
-          <div className="flex flex-col gap-14">
+                <div className="flex flex-col mt-14 gap-14">
             <div className="bg-center h-screen rounded-3xl bg-yogamin bg-no-repeat bg-cover md:bg-yoga md:h-80">
               <h3 className="text-6xl text-white font-medium leading-tight text-left p-10 invisible md:visible">
                 Йога
               </h3>
             </div>
+
             <div>
               <h3 className=" text-black font-medium text-2xl/6 text-left md:font-semibold md:text-4xl pb-10">
                 Подойдет для вас, если:
@@ -17,7 +18,7 @@ function Course() {
                   <div className="text-green text-7xl font-medium leading-normal">
                     1
                   </div>
-                  <p className="self-center text-left text-lg/6 text-white md:text-2xl/6 max-w-60">
+                  <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6 max-w-60">
                     Давно хотели попробовать йогу, но не решались начать
                   </p>
                 </div>
@@ -25,7 +26,7 @@ function Course() {
                   <div className="text-green text-7xl font-medium leading-normal">
                     2
                   </div>
-                  <p className="self-center text-left text-lg/6 text-white md:text-2xl/6 max-w-60">
+                  <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6 max-w-60">
                     Хотите укрепить позвоночник, избавиться от болей в спине и
                     суставах
                   </p>
@@ -34,7 +35,7 @@ function Course() {
                   <div className="text-green text-7xl font-medium leading-normal">
                     3
                   </div>
-                  <p className="self-center text-left text-lg/6 text-white md:text-2xl/6 max-w-60">
+                  <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6 max-w-60">
                     Ищете активность, полезную для тела и души
                   </p>
                 </div>
@@ -45,7 +46,7 @@ function Course() {
               <h3 className="text-black font-medium text-2xl/6  text-left md:text-4xl md:font-semibold pb-10">
                 Направления
               </h3>
-              <div className=" bg-green text-black rounded-3xl">
+              <div className="relative -z-20 bg-green text-black rounded-3xl">
                 <ul role="list" className="list-inside p-7 max-w-6xl md:columns-3">
                   <li className="flex items-center gap-2 mb-6 md:mb-8">
                     <svg
@@ -141,34 +142,45 @@ function Course() {
               </div>
             </div>
           </div>
-          <div className=" relative md:flex md:flex-row-reverse w-full mt-24 rounded-xl shadow-2xl">
-          <div className="absolute">
+
+          {/* <div className="  md:flex md:flex-row-reverse w-full mt-24 rounded-xl shadow-2xl"> */}
+          <div className="h-[156px]">
+       <div className="absolute -z-10 top-[1850px] inset-x-1 ">    
               <img
-                className="md:    md:right-6 md:rotate-3"
-                src="/public/img/vector.png"
+                className=" md:right-6 md:rotate-3"
+                src="/public/img/vectormin.png"
                 alt="greenline"
               />
+              </div>
+
+          <div className="absolute -z-10 top-[1700px] left-[97px] w-[313px] h-[348px]">
               <img
-                className="absolute h-[542px] w-[487px] mr-7 end-px bottom-0 "
-                src="/public/img/addcoursepic.png"
+                className=" md:h-[542px] md:w-[487px] md:mr-7 md:end-px "
+                src="/public/img/addcoursemin.png"
                 alt="sportsman"
               />
             </div>
-            <div className=" z-10 flex flex-col gap-7 w-[437px] m-10 min-h-[406px] bg-white ">
-              <h3 className="text-black text-3xl  font-medium text-left md:text-6xl">
+       </div>
+
+            <div className="flex flex-col gap-7 justify-items-center p-7 md:w-[477px] md:p-10 min-h-[406px] bg-white rounded-xl shadow-2xl ">
+              <h3 className="text-black text-3xl font-medium text-left md:text-6xl">
                 Начните путь к новому телу
               </h3>
-              <ul className="text-stone-700 text-lg/10 md:text-2xl/10 font-normal list-inside list-disc text-left ">
-                <li> проработка всех групп мышц</li>
-                <li> тренировка суставов</li>
-                <li> улучшение циркуляции крови</li>
-                <li> упражнения заряжают бодростью</li>
-                <li> помогают противостоять стрессам</li>
+              <ul className="text-gray text-lg leading-5 font-normal list-inside list-disc text-left md:text-2xl/10 ">
+                <li className="pb-2"> проработка всех групп мышц</li>
+                <li className="pb-2"> тренировка суставов</li>
+                <li className="pb-2"> улучшение циркуляции крови</li>
+                <li className="pb-2"> упражнения заряжают бодростью</li>
+                <li className="pb-2"> помогают противостоять стрессам</li>
               </ul>
-              <button className="btn-primary self-baseline md:w-[437px] md:h-[52px]">
+              <button className="btn-primary text-base  place-self-center min-w-[283px] h-[50px] md:text-lg md:w-full md:h-[52px]">
                 Войдите, чтобы добавить курс
               </button>
             </div>
+            
+
+
+
             {/* <div className="relative">
               <img
                 className="relative top-20 right-6 rotate-3"
@@ -181,7 +193,8 @@ function Course() {
                 alt="sportsman"
               />
             </div> */}
-          </div>
+          {/* </div> */}
+        
         </div>
       </>
     );
