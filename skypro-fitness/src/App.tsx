@@ -1,9 +1,10 @@
 import "./App.css";
+import Routing from "./components/Routing/Routing";
 
 function App() {
   return (
     <>
-      <h1 className="text-10xl font-bold underline">Hello world!</h1>
+      <Routing />
     </>
   );
 }
