@@ -16,9 +16,9 @@ export default {
         "light-green": "#C6FF00",
       },
       backgroundImage: {
-        yoga: "url('public/img/yogapic.png')",
-        vector: "url('public/img/vector.png')",
-        yogamin: "url('public/img/yogapicmin.png')",
+        yoga: "url('/public/img/yogapic.png')",
+        vector: "url('/public/img/vector.png')",
+        yogamin: "url('/public/img/yogapicmin.png')",
       },
     },
   },

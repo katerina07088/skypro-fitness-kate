@@ -14,7 +14,7 @@ function Course() {
               </h3>
               <div className="flex flex-col gap-4 md:flex-row gap-x-4">
                 <div className="flex gap-x-6 md:gap-x-3 bg-gradient-to-r from-slate-950 to-black md:w-[334px] h-36 rounded-3xl p-5 ">
-                  <div className="text-lime-400 text-7xl font-medium leading-normal">
+                  <div className="text-green text-7xl font-medium leading-normal">
                     1
                   </div>
                   <p className="self-center text-left text-lg/6 text-white md:text-2xl/6 max-w-60">
@@ -22,7 +22,7 @@ function Course() {
                   </p>
                 </div>
                 <div className="flex gap-x-6 md:gap-x-3 bg-gradient-to-r from-slate-950 to-black md:w-[412px] h-36 rounded-3xl p-5">
-                  <div className="text-lime-400 text-7xl font-medium leading-normal">
+                  <div className="text-green text-7xl font-medium leading-normal">
                     2
                   </div>
                   <p className="self-center text-left text-lg/6 text-white md:text-2xl/6 max-w-60">
@@ -31,7 +31,7 @@ function Course() {
                   </p>
                 </div>
                 <div className="flex gap-x-6 md:gap-x-3 bg-gradient-to-r from-slate-950 to-black md:w-[312px] h-36 rounded-3xl p-5">
-                  <div className="text-lime-400 text-7xl font-medium leading-normal">
+                  <div className="text-green text-7xl font-medium leading-normal">
                     3
                   </div>
                   <p className="self-center text-left text-lg/6 text-white md:text-2xl/6 max-w-60">
@@ -45,7 +45,7 @@ function Course() {
               <h3 className="text-black font-medium text-2xl/6  text-left md:text-4xl md:font-semibold pb-10">
                 Направления
               </h3>
-              <div className=" bg-lime-400 text-black rounded-3xl">
+              <div className=" bg-green text-black rounded-3xl">
                 <ul role="list" className="list-inside p-7 max-w-6xl md:columns-3">
                   <li className="flex items-center gap-2 mb-6 md:mb-8">
                     <svg
@@ -165,7 +165,7 @@ function Course() {
                 <li> упражнения заряжают бодростью</li>
                 <li> помогают противостоять стрессам</li>
               </ul>
-              <button className="btn-primary self-baseline w-[437px]">
+              <button className="btn-primary self-baseline md:w-[437px] md:h-[52px]">
                 Войдите, чтобы добавить курс
               </button>
             </div>

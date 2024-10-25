@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 export default function CoursePage() {
   return (
     <>
-      <Header isAuth={false}/>
+      <Header isAuth={false} />
       <Course />
     </>
   );
