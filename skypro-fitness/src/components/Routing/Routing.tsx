@@ -6,6 +6,7 @@ import RegisterPage from "../../pages/RegisterPage";
 import WorkoutVideoPage from "../../pages/WorkoutVideoPage";
 import NotFoundPage from "../../pages/NotFoundPage";
 import CoursePage from "../../pages/CoursePage";
+import { AccountPage } from "../AccountPage/AccountPage";
 
 
 export default function Routing() {
@@ -13,6 +14,7 @@ export default function Routing() {
     <>
       <Routes>
         <Route path={AppRoutes.MAIN} element={<MainPage />} />
+        <Route path={AppRoutes.ACCOUNT_PAGE} element={<AccountPage />} />
         <Route path={AppRoutes.LOGIN} element={<LoginPage />} />
         <Route path={AppRoutes.REGISTER} element={<RegisterPage />} />
         <Route path={AppRoutes.WORKOUT} element={<WorkoutVideoPage />} />
