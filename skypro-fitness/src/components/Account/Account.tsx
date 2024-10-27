@@ -7,7 +7,6 @@ export const Account = () => {
           <div>
             <div>
               <div className="mb-10 md:mt-16">
-                <p>просто тест для ветки, проверка связи</p>
                 <p className="text-[40px] font-bold">Профиль</p>
               </div>
 
