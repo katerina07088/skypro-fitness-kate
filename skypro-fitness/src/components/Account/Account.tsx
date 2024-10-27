@@ -1,41 +1,23 @@
-export const AccountPage = () => {
+export const Account = () => {
   return (
     <>
       <div className="container">
         <div className="w-full min-h-screen ">
-          {/* Шапка */}
-          <div className="h-50 flex flex-row items-center place-content-between mb-3">
-            <img src="/img/logo.png" className="h-[35px] w-[220px]" />
-            <button className="flex items-center space-x-4 mt-[46px]">
-              <img
-                src="/img/profile.png"
-                className="w-10 h-10 rounded-full"
-                alt="Профиль"
-              />
-              <p className="text-black font-semibold">Сергей</p>
-              <img src="/img/rectangle.png" alt="Стрелка" />
-            </button>
-          </div>
-
           {/* Профиль */}
           <div>
             <div>
-              <div className="mb-4">
-                <p className="w-[810px] h-[44px] text-2xl font-bold text-gray-700 text-left">
-                  Профиль
-                </p>
+              <div className="mb-10 md:mt-16">
+                <p className="text-[40px] font-bold">Профиль</p>
               </div>
 
-              <div className="bg-white flex items-center justify-between mb-6">
+              <div className="bg-white flex items-center justify-between mb-6 rounded-3xl shadow-md">
                 <div className="flex items-center space-x-6">
-                  <img
-                    src="/img/profile2.png"
-                    className=""
-                    alt="Аватар"
-                  />
+                  <div className="py-7 pl-7">
+                    <img src="/img/profile2.png" alt="Аватар"/>
+                  </div>
                   <div className="flex-col flex gap-[30px]">
                     <div className="flex flex-col gap-[10px]">
-                      <p className="text-2xl font-semibold text-gray-800">
+                      <p className="text-black text-3xl font-medium mb-7">
                         Сергей
                       </p>
                       <div>
@@ -58,11 +40,9 @@ export const AccountPage = () => {
             </div>
 
             {/* Курсы */}
-            <div className="mt-8">
-              <div className="p-6 rounded-lg">
-                <p className="w-[800px] text-2xl font-bold text-gray-700 text-left">
-                  Мои курсы
-                </p>
+            <div className="mt-8 mb-10">
+              <div className="mt-14 mb-10 rounded-lg">
+                <p className="text-[40px] font-bold">Мои курсы</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -96,7 +76,8 @@ export const AccountPage = () => {
                       <div className="w-[300px] bg-light-gray rounded-full h-2.5 mt-1">
                         <div
                           className="bg-blue h-2.5 rounded-full"
-                          style={{ width: "40%" }}></div>
+                          style={{ width: "40%" }}
+                        ></div>
                       </div>
                     </div>
                     <button className="bg-green mb-3 text-black w-full py-3 rounded-[46px] mt-4 hover:bg-lime-500 transition">
@@ -135,7 +116,8 @@ export const AccountPage = () => {
                       <div className="w-[300px] bg-light-gray rounded-full h-2.5 mt-1">
                         <div
                           className="bg-blue h-2.5 rounded-full"
-                          style={{ width: "0%" }}></div>
+                          style={{ width: "0%" }}
+                        ></div>
                       </div>
                     </div>
                     <button className="bg-green mb-3 text-black w-full py-3 rounded-[46px] mt-4 hover:bg-lime-500 transition">
@@ -174,7 +156,8 @@ export const AccountPage = () => {
                       <div className="w-[300px] bg-light-gray rounded-full h-2.5 mt-1">
                         <div
                           className="bg-blue h-2.5 rounded-full"
-                          style={{ width: "100%" }}></div>
+                          style={{ width: "100%" }}
+                        ></div>
                       </div>
                     </div>
                     <button className="bg-green mb-3 text-black w-full py-3 rounded-[46px] mt-4 hover:bg-lime-500 transition">

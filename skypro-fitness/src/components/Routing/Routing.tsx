@@ -6,8 +6,7 @@ import RegisterPage from "../../pages/RegisterPage";
 import WorkoutVideoPage from "../../pages/WorkoutVideoPage";
 import NotFoundPage from "../../pages/NotFoundPage";
 import CoursePage from "../../pages/CoursePage";
-import { AccountPage } from "../AccountPage/AccountPage";
-
+import AccountPage from "../../pages/AccountPage";
 
 export default function Routing() {
   return (
