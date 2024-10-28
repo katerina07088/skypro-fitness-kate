@@ -145,54 +145,38 @@ function Course() {
             </div>
           </div>
         </div>
-
-        <div className="  md:flex md:flex-row w-full mt-24 rounded-xl shadow-2xl"> 
-        <div className="h-[156px] md:hidden">
-          <div className="absolute -z-10 top-[1850px] inset-x-1 ">
-            <img
-              className=" md:right-6 md:rotate-3"
-              src="/public/img/vectormin.png"
-              alt="greenline"
-            />
+        <div className="md: ">
+        <div className="  md:flex md:flex-row md:w-full mt-24 rounded-xl shadow-2xl">
+          <div className="flex flex-col gap-7 justify-items-center p-7 md:w-[477px] md:p-10 min-h-[406px] bg-white rounded-xl shadow-2xl ">
+            <h3 className="text-black text-3xl font-medium text-left lg:text-6xl">
+              Начните путь к новому телу
+            </h3>
+            <ul className="text-gray text-lg leading-5 font-normal list-inside list-disc text-left lg:text-2xl/10 ">
+              <li className="pb-2"> проработка всех групп мышц</li>
+              <li className="pb-2"> тренировка суставов</li>
+              <li className="pb-2"> улучшение циркуляции крови</li>
+              <li className="pb-2"> упражнения заряжают бодростью</li>
+              <li className="pb-2"> помогают противостоять стрессам</li>
+            </ul>
+            <button className="btn-primary text-base  place-self-center min-w-[283px] h-[50px] lg:text-lg md:w-full md:h-[52px]">
+              Войдите, чтобы добавить курс
+            </button>
           </div>
 
-          <div className="absolute -z-10 top-[1700px] left-[97px] w-[313px] h-[348px] md:hidden">
+          
+          <div className="md:relative">
             <img
-              className=" md:h-[542px] md:w-[487px] md:mr-7 md:end-px "
-              src="/public/img/addcoursemin.png"
+              className=" absolute -z-10 top-[1830px] sm:top-[1850px] inset-x-1 md:relative md:top-56 md:left-0 md:rotate-2 lg:top-36 lg:left-6 lg:rotate-2"
+              src="/public/img/vector.png"
+              alt="greenline"
+            />
+            <img
+              className=" absolute -z-10 top-[1710px] left-[150px] sm:left-[250px] w-[313px] h-[348px]  md:shrink-0 lg:h-[542px] lg:w-[487px] md:top-14 md:left-2 lg:top-0 lg:left-20"
+              src="/public/img/addcoursepic.png"
               alt="sportsman"
             />
           </div>
         </div>
-
-        <div className="flex flex-col gap-7 justify-items-center p-7 md:w-[477px] md:p-10 min-h-[406px] bg-white rounded-xl shadow-2xl ">
-          <h3 className="text-black text-3xl font-medium text-left md:text-6xl">
-            Начните путь к новому телу
-          </h3>
-          <ul className="text-gray text-lg leading-5 font-normal list-inside list-disc text-left md:text-2xl/10 ">
-            <li className="pb-2"> проработка всех групп мышц</li>
-            <li className="pb-2"> тренировка суставов</li>
-            <li className="pb-2"> улучшение циркуляции крови</li>
-            <li className="pb-2"> упражнения заряжают бодростью</li>
-            <li className="pb-2"> помогают противостоять стрессам</li>
-          </ul>
-          <button className="btn-primary text-base  place-self-center min-w-[283px] h-[50px] md:text-lg md:w-full md:h-[52px]">
-            Войдите, чтобы добавить курс
-          </button>
-        </div>
-
-        <div className="relative">
-              <img
-                className="relative top-36 left-6 rotate-3"
-                src="/public/img/vector.png"
-                alt="greenline"
-              />
-              <img
-                className="absolute h-[542px] w-[487px] mr-7 end-px bottom-0 "
-                src="/public/img/addcoursepic.png"
-                alt="sportsman"
-              />
-            </div> 
          </div>
       </div>
     </>
