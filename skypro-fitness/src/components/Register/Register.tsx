@@ -13,6 +13,7 @@ export default function Register() {
         email: "",
         username: "",
         password: "",
+        confirmPassword: "",
     });
 
     const [error, setError] = useState<string | null>(null);
@@ -46,9 +47,15 @@ export default function Register() {
             navigate(AppRoutes.MAIN);
         } catch (error: unknown) {
             if (error instanceof Error) {
+                if (error.message.includes("почта уже используется")) {
+                    setError("Данная почта уже используется. Попробуйте войти.");
+                } else {
+                    setError("Произошла ошибка. Попробуйте снова.");
+                }
                 console.error(error.message);
               } else {
                 console.error("Unknown error:", error);
+                setError("Произошла неизвестная ошибка.");
               }
         }
     };
@@ -93,7 +100,7 @@ export default function Register() {
                     className="h-[52px] w-[280px] bg-white gap-2.5 px-[18px] py-4 rounded-lg border-[0.7px] border-solid border-[rgba(148,166,190,0.4)] placeholder:font-normal placeholder:text-lg 
                    placeholder:text-[#94a6be] focus:outline-none"
                     type="password"
-                    value={formValues.password}
+                    value={formValues.confirmPassword}
                     onChange={onInputChange}
                     name="password"
                     id="passwordFirst"
@@ -101,7 +108,7 @@ export default function Register() {
                   ></input>
                 </div>
   
-                {error && <p>{error}</p>}
+                {error && <p className="text-red-500">{error}</p>}
                 <button
                   className="w-[280px] h-[52px] bg-[#BCEC30] flex items-center justify-center text-[18px] leading-[19.8px] font-normal tracking-[-0.14px] text-black mt-8 mb-2.5 rounded-[46px] border-[none]
     outline: none hover:border-[none] hover:bg-[#C6FF00] active:bg-[#000000] active:text-white"

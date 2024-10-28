@@ -4,20 +4,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif'], // Оставляем часть из локальной версии
-        'sans': ['Roboto', 'sans-serif'],   // Оставляем часть из удаленной версии
+        sans: ["Roboto", "sans-serif"],
       },
       colors: {
-        "gray": "#999999",
+        gray: "#999999",
         "light-gray": "#F7F7F7",
-        "green": "#BCEC30",
+        green: "#BCEC30",
         "light-green": "#C6FF00",
       },
     },
     container: {
-      center: true, // Добавляем конфигурацию контейнера из удаленной версии
+      center: true,
     },
   },
   plugins: [],
 };
-

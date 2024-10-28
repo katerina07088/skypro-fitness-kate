@@ -69,7 +69,7 @@ export const Login = () => {
   return (
    <div className="flex w-full h-full overflow-x-hidden">
      <div className="flex fixed inset-0 flex items-center justify-center z-50 ">
-      <div className="flex bg-white rounded-[30px] w-[360px] h-[425px] p-[40px] flex flex-col items-center gap-[48px] mx-auto">
+      <div className="flex bg-white rounded-[30px] w-[360px] min-h-[425px] p-[40px] flex flex-col items-center gap-[48px] mx-auto">
         <img  className="w-[220px] h-[35px] mx-auto" src="public/logoModal.png" alt="logo_modal" />
           <form onSubmit={onLogin} className="w-full flex flex-col items-center gap-[10px]">
           <div className="flex flex-col w-full mb-4 items-center gap-[10px]">

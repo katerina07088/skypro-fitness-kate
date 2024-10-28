@@ -3,6 +3,7 @@ import { RegType, UserType } from "../types/user";
 import { app, auth } from "../lib/firebaseConfig"
 import { createUserWithEmailAndPassword, sendPasswordResetEmail, updatePassword, updateProfile } from "firebase/auth";
 import { child, get, getDatabase, ref, set } from "firebase/database";
+import { FirebaseError } from "firebase/app";
 
 // Типы аргументов и ответа функции
 type LoginCredentials = {
@@ -11,33 +12,48 @@ type LoginCredentials = {
 };
 
 const database = getDatabase(app);
+
 // Зарегестрироваться
 export async function regUser({
   email,
   username,
   password,
 }: RegType) {
-  // Создаем пользователя с email и паролем
-  const userCredential = await createUserWithEmailAndPassword(
-    auth,
-    email,
-    password,
-  );  
-  const uid = userCredential.user.uid;
-  // Обновляем профиль пользователя, чтобы установить displayName
-  await updateProfile(userCredential.user, {
-    displayName: username,
-  });
-  // Сохраняем информацию о пользователе в Realtime Database  
-  await set(ref(database, "users/" + uid), {
-    uid: uid,
-    name: username,
-    email: email,
-  });
-  // Получаем информацию о пользователе из базы данных
-  const snapshot = await get(child(ref(database), `users/${uid}`));
-  return snapshot.val();
+  try {
+    // Создаем пользователя с email и паролем
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password,
+    );
+    const uid = userCredential.user.uid;
+
+    // Обновляем профиль пользователя, чтобы установить displayName
+    await updateProfile(userCredential.user, {
+      displayName: username,
+    });
+
+    // Сохраняем информацию о пользователе в Realtime Database  
+    await set(ref(database, "users/" + uid), {
+      uid: uid,
+      name: username,
+      email: email,
+    });
+
+    // Получаем информацию о пользователе из базы данных
+    const snapshot = await get(child(ref(database), `users/${uid}`));
+    return snapshot.val();
+    
+  } catch (error) {
+    // Проверяем, является ли error экземпляром FirebaseError и имеет код ошибки
+    if (error instanceof FirebaseError && error.code === "auth/email-already-in-use") {
+      throw new Error("Данная почта уже используется");
+    } else {
+      throw new Error("Произошла ошибка при регистрации. Попробуйте снова.");
+    }
+  }
 }
+
 
 export const loginUser = async (credentials: LoginCredentials): Promise<UserType> => {
   try {
