@@ -15,6 +15,5 @@ export type LoginType = {
 
 export type RegType = {
   email: string;
-  username: string;
   password: string;
 };

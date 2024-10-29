@@ -1,7 +1,7 @@
 // Типы данных пользователя
 import { RegType, UserType } from "../types/user";
 import { app, auth } from "../lib/firebaseConfig"
-import { createUserWithEmailAndPassword, sendPasswordResetEmail, updatePassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendPasswordResetEmail, updatePassword } from "firebase/auth";
 import { child, get, getDatabase, ref, set } from "firebase/database";
 import { FirebaseError } from "firebase/app";
 
@@ -16,7 +16,6 @@ const database = getDatabase(app);
 // Зарегестрироваться
 export async function regUser({
   email,
-  username,
   password,
 }: RegType) {
   try {
@@ -29,14 +28,13 @@ export async function regUser({
     const uid = userCredential.user.uid;
 
     // Обновляем профиль пользователя, чтобы установить displayName
-    await updateProfile(userCredential.user, {
-      displayName: username,
-    });
+    // await updateProfile(userCredential.user, {
+    //   displayName: username,
+    // });
 
     // Сохраняем информацию о пользователе в Realtime Database  
     await set(ref(database, "users/" + uid), {
       uid: uid,
-      name: username,
       email: email,
     });
 
