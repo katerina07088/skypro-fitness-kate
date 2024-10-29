@@ -6,6 +6,6 @@ export const AppRoutes = {
     WORKOUT: "/workout",
     SELECTWORKOUT:"/selectworkout",
     EXIT: "/exit",
-    NOT_FOUND: "*"
+    NOT_FOUND: "*",
     ACCOUNT_PAGE: "/account",
   };
