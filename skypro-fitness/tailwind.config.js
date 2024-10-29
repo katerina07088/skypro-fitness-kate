@@ -10,9 +10,9 @@ export default {
     },
     extend: {
       colors: {
-        gray: "#999999",
+        "gray": "#999999",
         "light-gray": "#F7F7F7",
-        green: "#BCEC30",
+        "green": "#BCEC30",
         "light-green": "#C6FF00",
       },
       backgroundImage: {
