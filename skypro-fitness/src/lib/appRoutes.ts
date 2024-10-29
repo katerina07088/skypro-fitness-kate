@@ -8,4 +8,5 @@ export const AppRoutes = {
   NOT_FOUND: "*",
   RESET: "/reset",
   NEWPASSWORD: "/newpassword",
+  ACCOUNT_PAGE: "/account",
 };
