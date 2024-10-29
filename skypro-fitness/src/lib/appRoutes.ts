@@ -6,5 +6,7 @@ export const AppRoutes = {
   WORKOUT: "/workout",
   EXIT: "/exit",
   NOT_FOUND: "*",
+  RESET: "/reset",
+  NEWPASSWORD: "/newpassword",
   ACCOUNT_PAGE: "/account",
 };
