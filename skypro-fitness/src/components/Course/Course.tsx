@@ -145,7 +145,7 @@ function Course() {
             </div>
           </div>
         </div>
-      
+
         <div className="md:flex md:flex-row md:w-full mt-24 md:rounded-xl md:shadow-2xl md:h-[486px] md:bg-white">
           <div className="flex flex-col gap-7 justify-items-center p-7 md:w-[477px] md:p-10 bg-white max-md:rounded-xl max-md:shadow-2xl ">
             <h3 className="text-black text-3xl font-medium text-left lg:text-6xl">
@@ -155,7 +155,7 @@ function Course() {
               <li className="max-md:pb-[8px]"> проработка всех групп мышц</li>
               <li className="max-md:pb-[8px]"> тренировка суставов</li>
               <li className="max-md:pb-[8px]"> улучшение циркуляции крови</li>
-              <li className="max-md:pb-[8px]"> упражнения заряжают бодростью</li>
+              <li className="max-md:pb-[8px]">упражнения заряжают бодростью</li>
               <li className=""> помогают противостоять стрессам</li>
             </ul>
             <button className="btn-primary text-base  place-self-center min-w-[283px] h-[50px] lg:text-lg md:w-full md:h-[52px]">
@@ -163,11 +163,12 @@ function Course() {
             </button>
           </div>
 
-          
           <div className="md:relative">
-            <img src="/public/img/blackvector.png"
-            className="absolute top-[1780px] left-44 max-md:w-[32px] max-md:h-[27px] md:top-[118px] md:left-10 lg:top-[32px] lg:left-56"
-            alt="blackline"/>
+            <img
+              src="/public/img/blackvector.png"
+              className="absolute top-[1780px] left-44 max-md:w-[32px] max-md:h-[27px] md:top-[118px] md:left-10 lg:top-[32px] lg:left-56"
+              alt="blackline"
+            />
             <img
               className=" absolute -z-10 top-[1830px] inset-x-0 md:relative md:top-56 md:left-0 md:rotate-2 lg:top-[86px] lg:left-6 lg:rotate-3 md:z-10"
               src="/public/img/vector.png"
@@ -180,7 +181,7 @@ function Course() {
             />
           </div>
         </div>
-         </div>
+      </div>
     </>
   );
 }
