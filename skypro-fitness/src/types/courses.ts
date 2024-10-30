@@ -8,3 +8,4 @@ export type CourseType = {
   order: number;
   workouts: string[];
 };
+

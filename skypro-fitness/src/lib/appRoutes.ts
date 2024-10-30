@@ -9,4 +9,5 @@ export const AppRoutes = {
   RESET: "/reset",
   NEWPASSWORD: "/newpassword",
   ACCOUNT_PAGE: "/account",
+  SELECTWORKOUT: "/selectworkout"
 };
