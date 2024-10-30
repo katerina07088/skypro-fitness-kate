@@ -1,4 +1,6 @@
+
 function Header({isAuth} : {isAuth: boolean}) {
+
 
   return (
     <div className="container">
