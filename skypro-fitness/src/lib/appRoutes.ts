@@ -1,11 +1,13 @@
 export const AppRoutes = {
-    LOGIN: "/login",
-    REGISTER: "/register",
-    MAIN: "/",
-    COURSE: "/course",
-    WORKOUT: "/workout",
-    SELECTWORKOUT:"/selectworkout",
-    EXIT: "/exit",
-    NOT_FOUND: "*",
-    ACCOUNT_PAGE: "/account",
-  };
+  LOGIN: "/login",
+  REGISTER: "/register",
+  MAIN: "/",
+  COURSE: "/course",
+  WORKOUT: "/workout",
+  EXIT: "/exit",
+  NOT_FOUND: "*",
+  RESET: "/reset",
+  NEWPASSWORD: "/newpassword",
+  ACCOUNT_PAGE: "/account",
+  SELECTWORKOUT: "/selectworkout"
+};
