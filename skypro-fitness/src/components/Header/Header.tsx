@@ -1,4 +1,7 @@
-function Header({ isAuth }: { isAuth: boolean }) {
+
+function Header({isAuth} : {isAuth: boolean}) {
+
+
   return (
     <div className="container">
       <div className="h-50 flex flex-row items-center place-content-between mb-3">
