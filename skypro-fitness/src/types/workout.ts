@@ -14,3 +14,4 @@ export type ExerciseType = {
   quantity: number;
   progressWorkout: number;
 };
+

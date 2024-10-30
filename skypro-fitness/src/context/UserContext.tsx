@@ -45,5 +45,4 @@ const UserProvider = ({ children }: UserProviderProps) => {
   );
   
 };
-
 export default UserProvider;
