@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import MainPage from "../../pages/MainPage";
 import LoginPage from "../../pages/LoginPage";
 import RegisterPage from "../../pages/RegisterPage";
-import WorkoutVideoPage from "../../pages/WorkoutVideoPage";
+import WorkoutVideoPage from "../../pages/Workout/WorkoutVideoPage";
 import NotFoundPage from "../../pages/NotFoundPage";
 import CoursePage from "../../pages/CoursePage";
 import { AddProgress } from "../../pages/Workout/addProgress";
