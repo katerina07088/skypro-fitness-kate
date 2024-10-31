@@ -12,3 +12,4 @@ export const AppRoutes = {
     ACCOUNT_PAGE: "/account",
     SELECTWORKOUT: "/selectworkout",
   };
+

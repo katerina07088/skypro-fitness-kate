@@ -1,7 +1,11 @@
+import Course from "../components/Course/Course";
+import Header from "../components/Header/Header";
+
 export default function CoursePage() {
-    return (
-      <>
-        <h1 className="text-10xl font-bold underline">Course Page</h1>
-      </>
-    );
-  }
+  return (
+    <>
+      <Header isAuth={false} />
+      <Course />
+    </>
+  );
+}
