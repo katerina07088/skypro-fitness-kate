@@ -17,8 +17,8 @@ export default {
         "blue": "#00C1FF"
       },
       backgroundImage: {
-        yoga: "url('/public/img/yogapic.png')",
-        yogamin: "url('/public/img/yogapicmin.png')",
+        yoga: "url('/img/yogapic.png')",
+        yogamin: "url('/img/yogapicmin.png')",
       },
     },
   },

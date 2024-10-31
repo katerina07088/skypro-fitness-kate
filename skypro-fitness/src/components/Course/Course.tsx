@@ -3,39 +3,39 @@ function Course() {
     <>
       <div className="container">
         <div className="flex flex-col mt-14 gap-14">
-          <div className="bg-center h-screen rounded-3xl bg-yogamin bg-no-repeat bg-cover md:bg-yoga md:h-80">
+          <div className="bg-center h-[389px] rounded-3xl bg-yogamin bg-no-repeat bg-cover md:bg-yoga md:h-80">
             <h3 className="text-6xl text-white font-medium leading-tight text-left p-10 invisible md:visible">
               Йога
             </h3>
           </div>
 
           <div>
-            <h3 className=" text-black font-medium text-2xl/6 text-left md:font-semibold md:text-4xl pb-10">
+            <h3 className=" text-black font-medium text-2xl/6 text-left md:font-semibold md:text-4xl pb-6 md:pb-10">
               Подойдет для вас, если:
             </h3>
-            <div className="flex flex-col gap-4 md:flex-row gap-x-4">
-              <div className="flex gap-x-6 md:gap-x-3 bg-gradient-to-r from-slate-950 to-black md:w-[334px] h-36 rounded-3xl p-5 ">
+            <div className="flex flex-col gap-4 md:flex-row justify-between">
+              <div className="flex gap-x-6 bg-gradient-to-r from-slate-950 to-black md:w-[368px] min-h-36 rounded-3xl p-5 ">
                 <div className="text-green text-7xl font-medium leading-normal">
                   1
                 </div>
-                <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6 max-w-60">
+                <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6">
                   Давно хотели попробовать йогу, но не решались начать
                 </p>
               </div>
-              <div className="flex gap-x-6 md:gap-x-3 bg-gradient-to-r from-slate-950 to-black md:w-[412px] h-36 rounded-3xl p-5">
+              <div className="flex gap-x-6 bg-gradient-to-r from-slate-950 to-black md:w-[431px] min-h-36 rounded-3xl p-5">
                 <div className="text-green text-7xl font-medium leading-normal">
                   2
                 </div>
-                <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6 max-w-60">
+                <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6">
                   Хотите укрепить позвоночник, избавиться от болей в спине и
                   суставах
                 </p>
               </div>
-              <div className="flex gap-x-6 md:gap-x-3 bg-gradient-to-r from-slate-950 to-black md:w-[312px] h-36 rounded-3xl p-5">
+              <div className="flex gap-x-6 bg-gradient-to-r from-slate-950 to-black md:w-[327px] min-h-36 rounded-3xl p-5">
                 <div className="text-green text-7xl font-medium leading-normal">
                   3
                 </div>
-                <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6 max-w-60">
+                <p className="self-center text-left text-lg/6 text-white lg:text-2xl/6">
                   Ищете активность, полезную для тела и души
                 </p>
               </div>
@@ -146,37 +146,37 @@ function Course() {
           </div>
         </div>
 
-        <div className="md:flex md:flex-row md:w-full mt-24 md:rounded-xl md:shadow-2xl md:h-[486px] md:bg-white">
-          <div className="flex flex-col gap-7 justify-items-center p-7 md:w-[477px] md:p-10 bg-white max-md:rounded-xl max-md:shadow-2xl ">
+        <div className="md:flex md:flex-row md:w-full mt-[156px] md:rounded-xl md:shadow-2xl md:min-h-[486px] md:bg-white">
+          <div className="flex flex-col gap-7 justify-items-center p-7 w-[343px] md:w-[517px] md:p-10 bg-white max-md:rounded-xl max-md:shadow-2xl ">
             <h3 className="text-black text-3xl font-medium text-left lg:text-6xl">
               Начните путь к новому телу
             </h3>
-            <ul className="text-gray text-lg leading-5 font-normal list-inside list-disc text-left md:text-xl/8 lg:text-2xl/10 ">
-              <li className="max-md:pb-[8px]"> проработка всех групп мышц</li>
-              <li className="max-md:pb-[8px]"> тренировка суставов</li>
-              <li className="max-md:pb-[8px]"> улучшение циркуляции крови</li>
-              <li className="max-md:pb-[8px]">упражнения заряжают бодростью</li>
-              <li className=""> помогают противостоять стрессам</li>
+            <ul className="text-gray text-lg leading-5 font-normal list-outside text-left md:text-xl/8 lg:text-2xl/9 ">
+              <li className="max-md:pb-[8px] list-disc"> проработка всех групп мышц</li>
+              <li className="max-md:pb-[8px] list-disc"> тренировка суставов</li>
+              <li className="max-md:pb-[8px] list-disc"> улучшение циркуляции крови</li>
+              <li className="max-md:pb-[8px] list-disc">упражнения заряжают бодростью</li>
+              <li className="list-disc"> помогают противостоять стрессам</li>
             </ul>
             <button className="btn-primary text-base  place-self-center min-w-[283px] h-[50px] lg:text-lg md:w-full md:h-[52px]">
-              Войдите, чтобы добавить курс
+              Добавить курс
             </button>
           </div>
 
           <div className="md:relative">
             <img
-              src="/public/img/blackvector.png"
-              className="absolute top-[1780px] left-44 max-md:w-[32px] max-md:h-[27px] md:top-[118px] md:left-10 lg:top-[32px] lg:left-56"
+              src="/img/blackvector.png"
+              className="absolute top-[1526px] left-44 max-md:w-[32px] max-md:h-[27px] md:top-[118px] md:left-10 lg:top-[32px] lg:left-56"
               alt="blackline"
             />
             <img
-              className=" absolute -z-10 top-[1830px] inset-x-0 md:relative md:top-56 md:left-0 md:rotate-2 lg:top-[86px] lg:left-6 lg:rotate-3 md:z-10"
-              src="/public/img/vector.png"
+              className=" absolute -z-10 top-[1560px] inset-x-0 md:relative md:top-56 md:left-0 md:rotate-2 lg:top-[86px] lg:-left-4 md:z-10"
+              src="/img/vector.png"
               alt="greenline"
             />
             <img
-              className=" absolute -z-10 top-[1700px] left-[112px] w-[313px] h-[348px] md:top-14 md:left-2 lg:h-[542px] lg:w-[487px] lg:-top-20 lg:left-32 md:z-10"
-              src="/public/img/addcoursepic.png"
+              className=" absolute -z-10 top-[1450px] left-[112px] w-[313px] h-[348px] md:top-14 md:left-2 lg:h-[542px] lg:w-[487px] lg:-top-20 lg:left-28 md:z-10"
+              src="/img/addcoursepic.png"
               alt="sportsman"
             />
           </div>
