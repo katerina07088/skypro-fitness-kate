@@ -1,7 +1,23 @@
-import { cards } from "../../lib/data";
+import { useEffect, useState } from "react";
 import Card from "../Card/Card";
+import { CourseType } from "../../types/CourseType.type";
+import { getCourses } from "../../api/apiCourses";
 
 function Main() {
+
+  const [courses, setCourses] = useState<Array<CourseType>>([]);
+  // const {courses, setCourses} = useCourseContext();
+
+  useEffect(() => {
+    getCourses().then((allCourses) => {
+      const courses = Object.values(allCourses);
+      setCourses(courses);
+    })
+    .catch(() => {
+      // Обработать ошибку через setError
+      console.log("Не удалось загрузить данные, попробуйте позже.");
+    });
+  }, []);
   
   return (
     <div className="container">
@@ -23,8 +39,8 @@ function Main() {
       </div>
 
       <div className="flex flex-row flex-wrap gap-4 md:gap-9 mb-8 mt-9 md:mt-8">
-        {cards.map((course) => (
-          <Card course={course} key={course.id} />
+        {courses.map((course) => (
+          <Card course={course} key={course._id} />
         ))}
       </div>
 

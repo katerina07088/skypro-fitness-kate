@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom";
+import { AppRoutes } from "../../lib/appRoutes";
+
 function Header({isAuth} : {isAuth: boolean}) {
+  const navigate = useNavigate();
+
+  const handleEnterButton = () => {
+    navigate(AppRoutes.LOGIN);
+  };
 
   return (
     <div className="container">
@@ -6,7 +14,7 @@ function Header({isAuth} : {isAuth: boolean}) {
         <img src="/img/logo.png" className="h-[35px] w-[220px]" />
 
         {!isAuth && (
-          <button className="btn-primary md:w-26 h-9 md:h-13">Войти</button>
+          <button className="btn-primary md:w-26 h-9 md:h-13" onClick={handleEnterButton}>Войти</button>
         )}
 
         {isAuth && (
