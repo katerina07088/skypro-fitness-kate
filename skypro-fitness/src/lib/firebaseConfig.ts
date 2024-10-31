@@ -9,19 +9,21 @@ import { getDatabase } from "firebase/database";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCsNZL9OWoTFVXZZf9zmqT5wTQeQx_naXc",
-  authDomain: "skyfitnesspro-5d4b3.firebaseapp.com",
-  projectId: "skyfitnesspro-5d4b3",
-  storageBucket: "skyfitnesspro-5d4b3.appspot.com",
-  messagingSenderId: "429558793401",
-  appId: "1:429558793401:web:9e3da8762041d22a958768",
+  apiKey: "AIzaSyC3CTRcISPpWmBuCqT7_4q8qDrvwBcYR9s",
+  authDomain: "fitness-cee19.firebaseapp.com",
+  databaseURL:
+    "https://fitness-cee19-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "fitness-cee19",
+  storageBucket: "fitness-cee19.appspot.com",
+  messagingSenderId: "299938279026",
+  appId: "1:299938279026:web:70f45eed5a15e75df2dceb",
   //measurementId: "G-S26PVJKL9G"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getDatabase(app)
+const db = getDatabase(app);
 //const analytics = getAnalytics(app);
 
 export { app, auth, db };

@@ -16,10 +16,11 @@ export default function Routing() {
   return (
     <>
       <Routes>
-        <Route path={AppRoutes.MAIN} element={<MainPage />} />
+        <Route path={AppRoutes.MAIN} element={<MainPage />}>
+          <Route path={AppRoutes.LOGIN} element={<LoginPage />} />
+          <Route path={AppRoutes.REGISTER} element={<RegisterPage />} />
+        </Route>
         <Route path={AppRoutes.ACCOUNT_PAGE} element={<AccountPage />} />
-        <Route path={AppRoutes.LOGIN} element={<LoginPage />} />
-        <Route path={AppRoutes.REGISTER} element={<RegisterPage />} />
         <Route path={AppRoutes.WORKOUT} element={<WorkoutVideoPage />}>
           <Route path={AppRoutes.ADDPROGRESS} element={<AddProgress />} />
         </Route>
@@ -27,7 +28,7 @@ export default function Routing() {
         <Route path={AppRoutes.COURSE} element={<CoursePage />} />
         <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPage />} />
         <Route path={AppRoutes.RESET} element={<ResetPage />} />
-        <Route path={AppRoutes.NEWPASSWORD} element={<NewPasswordPage />} />  
+        <Route path={AppRoutes.NEWPASSWORD} element={<NewPasswordPage />} />
       </Routes>
     </>
   );
