@@ -4,9 +4,7 @@ import { CourseType } from "../../types/CourseType.type";
 import { getCourses } from "../../api/apiCourses";
 
 function Main() {
-
   const [courses, setCourses] = useState<Array<CourseType>>([]);
-  // const {courses, setCourses} = useCourseContext();
 
   useEffect(() => {
     getCourses().then((allCourses) => {
@@ -14,7 +12,6 @@ function Main() {
       setCourses(courses);
     })
     .catch(() => {
-      // Обработать ошибку через setError
       console.log("Не удалось загрузить данные, попробуйте позже.");
     });
   }, []);

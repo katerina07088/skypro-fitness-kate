@@ -1,18 +1,9 @@
-// type CourseSimple = {
-//   id: number;
-//   imgUrl: string;
-//   courseName: string;
-//   duration: string;
-//   time: string;
-//   difficulty: string;
-// };
-
 import { CourseType } from "../../types/CourseType.type";
 
 function Card({ course }: {course: CourseType}) {
   
   return (
-    <div className="flex flex-col gap-7 bg-white rounded-3xl relative cursor-pointer shadow-md">
+    <div className="flex flex-col gap-7 bg-white w-[360px] rounded-3xl relative cursor-pointer shadow-md">
       <img className="w-full" src={`/img/workout_${course.order}.png`} />
       <img className="absolute top-4 right-4" src="/img/circle.png" alt="add-course"/>
       <div className="mx-7">
