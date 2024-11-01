@@ -1,7 +1,12 @@
 // Типы данных пользователя
 import { RegType, UserType } from "../types/user";
 import { app, auth } from "../lib/firebaseConfig"
-import { createUserWithEmailAndPassword, sendPasswordResetEmail, updatePassword } from "firebase/auth";
+import { 
+    createUserWithEmailAndPassword, 
+    sendPasswordResetEmail, 
+    signInWithEmailAndPassword, 
+    updatePassword } 
+  from "firebase/auth";
 import { child, get, getDatabase, ref, set } from "firebase/database";
 import { FirebaseError } from "firebase/app";
 
@@ -52,15 +57,17 @@ export async function regUser({
   }
 }
 
-
 export const loginUser = async (credentials: LoginCredentials): Promise<UserType> => {
   try {
-    const response = await fetch("https://example.com/api/login", {
-      method: "POST",
+    // Аутентифицируем пользователя через Firebase
+    const userCredential = await signInWithEmailAndPassword(auth, credentials.login, credentials.password);
+    const uid = userCredential.user.uid;
+
+    const response = await fetch(`https://fitness-cee19-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`, {
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
-      },
-      body: JSON.stringify(credentials),
+      },      
     });
 
     if (!response.ok) {

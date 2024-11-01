@@ -31,7 +31,7 @@ const Reset = ({ email }: ResetProps) => {
         <div className="h-screen flex items-center">
           <div className="block bg-white w-[360px] h-[223px] shadow-[0px_4px_67px_-12px_rgba(0,0,0,0.13)] mx-auto my-0 px-[60px] py-[50px] rounded-[30px] border-[0.7px] border-solid border-[#d4dbe5]">
             <div className="pb-[50px]">
-              <img src="../../public/logoModal.png" alt="logo_modal" />
+              <img src="/logoModal.png" alt="logo_modal" />
             </div>
             <div className="h-[60px] w-[280px] gap-[10px] text-center">
               {message && (
