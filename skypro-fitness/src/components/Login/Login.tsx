@@ -2,22 +2,12 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 import { AppRoutes } from "../../lib/appRoutes";
-import { useUser } from "../../hooks/useUser";
 import { loginUser } from "../../api/apiUser";
+import { useUserContext } from "../../hooks/useUserContext";
 
 export const Login = () => {
-  const { setUser } = useUser();
+  const { setUser } = useUserContext();
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   // Добавляем класс фона для body
-  //   document.body.classList.add("bg-gray-300");
-
-  //   // Убираем класс при размонтировании компонента
-  //   return () => {
-  //     document.body.classList.remove("bg-gray-300");
-  //   };
-  // }, []);
 
   const [formValues, setFormValues] = useState({
     email: "",
@@ -53,12 +43,12 @@ export const Login = () => {
     if (hasError) return;
 
     try {
-      const response = await loginUser({
+      const user = await loginUser({
         login: formValues.email,
         password: formValues.password,
       });
 
-      setUser(response);
+      setUser(user);
       navigate(AppRoutes.MAIN);
     } catch (error: unknown) {
       console.error(error);

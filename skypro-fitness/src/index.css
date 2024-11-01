@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  html, body {
+  html,
+  body {
     @apply w-full h-full font-sans bg-light-gray m-0 p-0 box-border;
   }
-  
+
   #root {
     @apply max-w-80 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl font-normal my-0 mx-auto py-8 px-0;
   }
@@ -28,6 +29,10 @@
   .btn-primary {
     @apply rounded-3xl px-4 md:px-6 py-1 text-lg text-black font-normal bg-green hover:bg-light-green cursor-pointer shadow-md;
   }
+
+  .btn-primary-white {
+    @apply rounded-3xl px-4 md:px-6 py-1 text-lg text-black font-normal bg-white hover:bg-light-gray border border-black cursor-pointer shadow-md;
+  }
 }
 
 @layer utilities {
@@ -45,9 +50,8 @@
     border-radius: 10px;
   }
 
-.line{
-  width: 320px;
-  border: 1px solid #38383629;
- }
-
+  .line {
+    width: 320px;
+    border: 1px solid #38383629;
+  }
 }
