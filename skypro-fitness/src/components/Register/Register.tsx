@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useUser } from "../../hooks/useUser";
 import React, { useState } from "react";
 import { AppRoutes } from "../../lib/appRoutes";
 import { regUser } from "../../api/apiUser";
+import { useUserContext } from "../../hooks/useUserContext";
 
 export default function Register() {
-  const { setUser } = useUser();
+  const { setUser } = useUserContext();
   const navigate = useNavigate();
 
   const [formValues, setFormValues] = useState({

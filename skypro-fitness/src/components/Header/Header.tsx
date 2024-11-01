@@ -1,27 +1,56 @@
 import { useNavigate } from "react-router-dom";
 import { AppRoutes } from "../../lib/appRoutes";
+import { useUserContext } from "../../hooks/useUserContext";
+import { useState } from "react";
+import { MyProfile } from "../MyProfile/MyProfile";
 
-function Header({isAuth} : {isAuth: boolean}) {
+function Header() {
   const navigate = useNavigate();
+  const { user } = useUserContext();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleEnterButton = () => {
+  const handleLoginButton = () => {
     navigate(AppRoutes.LOGIN);
+  };
+
+  const toggleProfileClick = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
+  const handleLogoClick = () => {
+    navigate(AppRoutes.MAIN);
   };
 
   return (
     <div className="container">
       <div className="h-50 flex flex-row items-center place-content-between mb-3">
-        <img src="/img/logo.png" className="h-[35px] w-[220px]" />
+        <img
+          src="/img/logo.png"
+          className="h-[35px] w-[220px] cursor-pointer"
+          onClick={handleLogoClick}
+        ></img>
 
-        {!isAuth && (
-          <button className="btn-primary md:w-26 h-9 md:h-13" onClick={handleEnterButton}>Войти</button>
+        {!user && (
+          <button
+            className="btn-primary md:w-26 h-9 md:h-13"
+            onClick={handleLoginButton}
+          >
+            Войти
+          </button>
         )}
 
-        {isAuth && (
-          <div className="flex flex-row items-center w-42 gap-3">
-            <img src="/img/profile.png" className="w-12 h-12"></img>
-            <p className="text-2xl font-normal text-black">Сергей</p>
-            <img src="/img/rectangle.png" className="w-4 h-3 "></img>
+        {user && (
+          <div className="relative">
+            <div className="flex flex-row items-center w-42 gap-3">
+              <img src="/img/profile.png" className="w-12 h-12"></img>
+              <p className="text-2xl font-normal text-black">{user.email}</p>
+              <img
+                src="/img/rectangle.png"
+                className="w-4 h-3 cursor-pointer"
+                onClick={toggleProfileClick}
+              ></img>
+            </div>
+            {isOpen && <MyProfile setIsOpen={setIsOpen}/>}
           </div>
         )}
       </div>

@@ -1,7 +1,7 @@
 // Типы данных пользователя
-import { RegType, UserType } from "../types/user";
+import { RegType } from "../types/user";
 import { app, auth } from "../lib/firebaseConfig"
-import { createUserWithEmailAndPassword, sendPasswordResetEmail, updatePassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, updatePassword } from "firebase/auth";
 import { child, get, getDatabase, ref, set } from "firebase/database";
 import { FirebaseError } from "firebase/app";
 
@@ -53,27 +53,44 @@ export async function regUser({
 }
 
 
-export const loginUser = async (credentials: LoginCredentials): Promise<UserType> => {
+// export const loginUser = async (credentials: LoginCredentials): Promise<UserType> => {
+//   try {
+//     const response = await fetch("https://example.com/api/login", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(credentials),
+//     });
+
+//     if (!response.ok) {
+//       throw new Error("Неверные данные для входа");
+//     }
+
+//     const userData: UserType = await response.json();
+//     return userData;
+//   } catch (error) {
+//     console.error("Ошибка при входе:", error);
+//     throw error;
+//   }
+// };
+
+export async function loginUser(credentials: LoginCredentials) {
   try {
-    const response = await fetch("https://example.com/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(credentials),
-    });
-
-    if (!response.ok) {
-      throw new Error("Неверные данные для входа");
-    }
-
-    const userData: UserType = await response.json();
-    return userData;
+    const userCredentials = await signInWithEmailAndPassword(
+      auth,
+      credentials.login,
+      credentials.password
+    );
+    const uid = userCredentials.user.uid;
+    const snapshot = await get(child(ref(database), `users/${uid}`));
+    return snapshot.val();
   } catch (error) {
-    console.error("Ошибка при входе:", error);
-    throw error;
+    if (error instanceof Error) {
+      console.log(error.message);
+    }
   }
-};
+}
 
 export async function handlePasswordReset(email: string) {
   try {
