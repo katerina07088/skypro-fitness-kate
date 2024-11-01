@@ -43,7 +43,7 @@ function Header() {
           <div className="relative">
             <div className="flex flex-row items-center w-42 gap-3">
               <img src="/img/profile.png" className="w-12 h-12"></img>
-              <p className="text-2xl font-normal text-black">{user.email}</p>
+              <p className="hidden md:block text-2xl font-normal text-black">{user.email}</p>
               <img
                 src="/img/rectangle.png"
                 className="w-4 h-3 cursor-pointer"
