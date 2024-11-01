@@ -147,18 +147,18 @@ function Course() {
         </div>
 
         <div className="md:flex md:flex-row md:w-full mt-[156px] md:rounded-xl md:shadow-2xl md:min-h-[486px] md:bg-white">
-          <div className="flex flex-col gap-7 justify-items-center p-7 w-[343px] md:w-[517px] md:p-10 bg-white max-md:rounded-xl max-md:shadow-2xl ">
+          <div className="flex flex-col gap-7 justify-items-center p-7 max-md:max-w-[343px] md:w-[517px] md:p-10 bg-white max-md:rounded-xl max-md:shadow-2xl ">
             <h3 className="text-black text-3xl font-medium text-left lg:text-6xl">
               Начните путь к новому телу
             </h3>
-            <ul className="text-gray text-lg leading-5 font-normal list-outside text-left md:text-xl/8 lg:text-2xl/9 ">
+            <ul className="text-gray text-lg leading-5 font-normal list-outside text-left md:text-xl/8 lg:text-2xl/9 ml-4 ">
               <li className="max-md:pb-[8px] list-disc"> проработка всех групп мышц</li>
               <li className="max-md:pb-[8px] list-disc"> тренировка суставов</li>
               <li className="max-md:pb-[8px] list-disc"> улучшение циркуляции крови</li>
               <li className="max-md:pb-[8px] list-disc">упражнения заряжают бодростью</li>
               <li className="list-disc"> помогают противостоять стрессам</li>
             </ul>
-            <button className="btn-primary text-base  place-self-center min-w-[283px] h-[50px] lg:text-lg md:w-full md:h-[52px]">
+            <button className="btn-primary text-base place-self-center w-full h-[50px] lg:text-lg md:h-[52px]">
               Добавить курс
             </button>
           </div>
@@ -166,7 +166,7 @@ function Course() {
           <div className="md:relative">
             <img
               src="/img/blackvector.png"
-              className="absolute top-[1526px] left-44 max-md:w-[32px] max-md:h-[27px] md:top-[118px] md:left-10 lg:top-[32px] lg:left-56"
+              className="absolute top-[1508px] left-40 max-md:w-[32px] max-md:h-[27px] md:top-[118px] md:left-10 lg:top-[32px] lg:left-56"
               alt="blackline"
             />
             <img
@@ -175,7 +175,7 @@ function Course() {
               alt="greenline"
             />
             <img
-              className=" absolute -z-10 top-[1450px] left-[112px] w-[313px] h-[348px] md:top-14 md:left-2 lg:h-[542px] lg:w-[487px] lg:-top-20 lg:left-28 md:z-10"
+              className=" absolute -z-10 top-[1436px] left-[86px] w-[313px] h-[348px] md:top-14 md:left-2 lg:h-[542px] lg:w-[487px] lg:-top-20 lg:left-28 md:z-10"
               src="/img/addcoursepic.png"
               alt="sportsman"
             />
