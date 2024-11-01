@@ -9,16 +9,6 @@ export const Login = () => {
   const { setUser } = useUser();
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   // Добавляем класс фона для body
-  //   document.body.classList.add("bg-gray-300");
-
-  //   // Убираем класс при размонтировании компонента
-  //   return () => {
-  //     document.body.classList.remove("bg-gray-300");
-  //   };
-  // }, []);
-
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
@@ -122,11 +112,11 @@ export const Login = () => {
               </>
             )}
             <div className="mt-[24px] flex flex-col w-full items-center gap-[10px]">
-              <button className="bg-[#BCEC30] text-black w-full h-[52px] rounded-[46px] py-[16px] px-[26px] hover:bg-[#C6FF00] border-none active:bg-black active:text-white">
+              <button className="btn-primary w-full h-[52px]">
                 Войти
               </button>
               <button
-                className="border border-black text-black w-full h-[52px] rounded-[46px] py-[16px] px-[26px] bg-white hover:bg-[#F7F7F7] active:bg-[#E9ECED] active:text-black"
+                className="btn-primary border border-black w-full h-[52px] bg-white hover:bg-[#F7F7F7] active:bg-[#E9ECED] active:text-black"
                 onClick={() => navigate(AppRoutes.REGISTER)}
               >
                 Зарегистрироваться

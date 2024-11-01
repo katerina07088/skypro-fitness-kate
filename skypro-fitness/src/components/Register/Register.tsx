@@ -105,7 +105,7 @@ export default function Register() {
           {error && <p className="text-red-500">{error}</p>}
 
           <button
-            className="w-[280px] h-[52px] bg-[#BCEC30] text-[18px] font-normal text-black mt-8 mb-2.5 rounded-[46px] hover:bg-[#C6FF00] active:bg-[#000000] active:text-white"
+            className="btn-primary w-[280px] h-[52px] mt-8 mb-2.5 active:bg-[#000000] active:text-white"
             type="submit"
           >
             Зарегистрироваться
