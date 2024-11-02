@@ -20,3 +20,27 @@ export function getUserFromLocalStorage() {
 export function removeUserFromLocalStorage() {
   window.localStorage.removeItem("user");
 }
+
+import { CourseType } from "../types/CourseType.type";
+
+export function saveCoursesToLocalStorage(courses: Array<CourseType>) {
+  window.localStorage.setItem("courses", JSON.stringify(courses));
+}
+
+export function getCoursesFromLocalStorage() {
+  try {
+    const courses = window.localStorage.getItem("courses");
+    if (courses) {
+      return JSON.parse(courses);
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error);
+    }
+  }
+}
+
+export function removeCoursesFromLocalStorage() {
+  window.localStorage.removeItem("courses");
+}
+
