@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 import { AppRoutes } from "../../lib/appRoutes";
-import { useUser } from "../../hooks/useUser";
 import { loginUser } from "../../api/apiUser";
+import { useUserContext } from "../../hooks/useUserContext";
 
 export const Login = () => {
-  const { setUser } = useUser();
+  const { setUser } = useUserContext();
   const navigate = useNavigate();
 
   const [formValues, setFormValues] = useState({
@@ -16,7 +16,7 @@ export const Login = () => {
 
   const [loginError, setLoginError] = useState<string | null>(null);
   const [passwordError, setPasswordError] = useState<string | null>(null);
-
+  
   const onInputChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     const { name, value } = event.target;
     setFormValues({ ...formValues, [name]: value });
@@ -43,12 +43,12 @@ export const Login = () => {
     if (hasError) return;
 
     try {
-      const response = await loginUser({
+      const user = await loginUser({
         login: formValues.email,
         password: formValues.password,
       });
 
-      setUser(response);
+      setUser(user);
       navigate(AppRoutes.MAIN);
     } catch (error: unknown) {
       console.error(error);
@@ -78,7 +78,7 @@ export const Login = () => {
                 name="email"
                 value={formValues.email}
                 onChange={onInputChange}
-                className={`w-[280px] h-[52px] bg-white border rounded-[8px] p-[16px_18px] ${
+                className={`input-class ${
                   loginError ? "border-red-500" : "border-[#D0CECE]"
                 } text-[#D0CECE]`}
               />
@@ -92,7 +92,7 @@ export const Login = () => {
                 name="password"
                 value={formValues.password}
                 onChange={onInputChange}
-                className={`w-[280px] h-[52px] bg-white border rounded-[8px] p-[16px_18px] ${
+                className={`input-class ${
                   passwordError ? "border-red-500" : "border-[#D0CECE]"
                 } text-[#D0CECE]`}
               />
