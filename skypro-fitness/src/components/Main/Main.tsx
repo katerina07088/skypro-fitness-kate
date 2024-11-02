@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Card from "../Card/Card";
-import { CourseType } from "../../types/CourseType.type";
 import { getCourses } from "../../api/apiCourses";
+import { useCoursesContext } from "../../hooks/useCoursesContext";
 
 function Main() {
-  const [courses, setCourses] = useState<Array<CourseType>>([]);
+  const { courses, setCourses} = useCoursesContext();
 
   useEffect(() => {
     getCourses().then((allCourses) => {
