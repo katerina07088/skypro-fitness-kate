@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { AppRoutes } from "../../lib/appRoutes";
+
 export const Account = () => {
   return (
     <>
@@ -30,9 +33,9 @@ export const Account = () => {
                       <button className="bg-green text-black px-6 py-2 rounded-full transition hover:bg-lime-500">
                         Изменить пароль
                       </button>
-                      <button className="bg-white text-black px-12 py-2 rounded-full border border-gray-300 hover:bg-gray-100 transition">
+                      <Link to={AppRoutes.LOGIN} className="bg-white text-black px-12 py-2 rounded-full border border-gray-300 hover:bg-gray-100 transition">
                         Выйти
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
