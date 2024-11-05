@@ -42,7 +42,7 @@ const benefitsList = [
   "помогают противостоять стрессам",
 ];
 
-function Course({ courseId }: { courseId: string | underfined }) {
+function Course({ courseId }: { courseId: string | undefined }) {
   // const { fitting, directions, nameRU } = course;
   const { courses } = useCoursesContext();
   //const { itemId } = useParams();
