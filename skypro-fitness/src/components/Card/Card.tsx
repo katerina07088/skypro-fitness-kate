@@ -2,9 +2,16 @@ import { useNavigate } from "react-router-dom";
 import { CourseType } from "../../types/CourseType.type";
 import { AppRoutes } from "../../lib/appRoutes";
 
+
+//import { useContext } from "react";
+
+//import { CoursesContext } from "../../context/CoursesContext";
+//<Link to={`/course/${id}`}>
+//
+
 function Card({ course }: {course: CourseType}) {
   const navigate = useNavigate();
-
+  //const { id } = useParams();
   const handleCardClick = () => {
     navigate(AppRoutes.COURSE);
   };

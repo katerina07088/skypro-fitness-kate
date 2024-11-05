@@ -1,11 +1,68 @@
-function Course() {
+//import { useParams } from "react-router-dom";
+//import { useCoursesContext } from "../../hooks/useCoursesContext";
+
+//import { useParams } from "react-router-dom";
+//import { useEffect } from "react";
+//import { useCoursesContext } from "../../hooks/useCoursesContext";
+//import { useParams } from "react-router-dom";
+//import { getCourse2 } from "../../api/apiCourses";
+//import { useParams } from "react-router-dom";
+//import { CourseType } from "../../types/CourseType.type";
+import { useCoursesContext } from "../../hooks/useCoursesContext";
+//import { useEffect } from "react";
+
+//import { useParams } from "react-router-dom";
+//import { CourseType } from "../../types/CourseType.type";
+
+// useEffect(() => {
+//   if (courses.length) {
+//     const course = course.find((c) => c._id === id);
+//     if (!course) {
+//       return nav(routes.main);
+//     }
+//     console.log(course);
+//   //   }
+// }, [courses]);
+
+// type CourseProps = {
+//   course: CourseType;
+//   setCourse: (course: CourseType) => void;
+// };
+
+//const [course, setCourse] = useContext(CoursesContext);
+//const nav = useNavigate();
+
+//onClick={onClickCourse} key={course._id}
+
+const benefitsList = [
+  "проработка всех групп мышц",
+  "тренировка суставов",
+  "улучшение циркуляции крови",
+  "упражнения заряжают бодростью",
+  "помогают противостоять стрессам",
+];
+
+function Course({ courseId }: { courseId: string | underfined }) {
+  // const { fitting, directions, nameRU } = course;
+  const { courses } = useCoursesContext();
+  //const { itemId } = useParams();
+
+  // const course = courses.find((course) => course._id === id);
+  //  useEffect(() => {
+  //  if (courses.length) {
+  // const course = courses.find((c) => c._id === itemId);
+  //     console.log(course);
+  //  } }, [courses, id]);
+
+  const course = courses.find((course) => course._id === courseId);
+
   return (
     <>
       <div className="container">
         <div className="flex flex-col mt-14 gap-14">
           <div className="bg-center h-[389px] rounded-3xl bg-yogamin bg-no-repeat bg-cover md:bg-yoga md:h-80">
             <h3 className="text-6xl text-white font-medium leading-tight text-left p-10 invisible md:visible">
-              Йога
+              {course.nameRU}
             </h3>
           </div>
 
@@ -146,18 +203,20 @@ function Course() {
           </div>
         </div>
 
-        <div className="md:flex md:flex-row md:w-full mt-[156px] md:rounded-xl md:shadow-2xl md:min-h-[486px] md:bg-white">
+        <div className="md:flex md:flex-row md:w-full mt-[156px] md:mt-[102px] md:rounded-xl md:shadow-2xl md:min-h-[486px] md:bg-white">
           <div className="flex flex-col gap-7 justify-items-center p-7 max-md:max-w-[343px] md:w-[517px] md:p-10 bg-white max-md:rounded-xl max-md:shadow-2xl ">
             <h3 className="text-black text-3xl font-medium text-left lg:text-6xl">
               Начните путь к новому телу
             </h3>
             <ul className="text-gray text-lg leading-5 font-normal list-outside text-left md:text-xl/8 lg:text-2xl/9 ml-4 ">
-              <li className="max-md:pb-[8px] list-disc"> проработка всех групп мышц</li>
-              <li className="max-md:pb-[8px] list-disc"> тренировка суставов</li>
-              <li className="max-md:pb-[8px] list-disc"> улучшение циркуляции крови</li>
-              <li className="max-md:pb-[8px] list-disc">упражнения заряжают бодростью</li>
-              <li className="list-disc"> помогают противостоять стрессам</li>
+              {benefitsList.map((item, i) => (
+                <li className="max-md:pb-[8px] list-disc" key={i}>
+                  {" "}
+                  {item}{" "}
+                </li>
+              ))}
             </ul>
+
             <button className="btn-primary text-base place-self-center w-full h-[50px] lg:text-lg md:h-[52px]">
               Добавить курс
             </button>

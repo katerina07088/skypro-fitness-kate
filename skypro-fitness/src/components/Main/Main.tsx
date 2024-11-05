@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Card from "../Card/Card";
 import { getCourses } from "../../api/apiCourses";
+//import { CourseType } from "../../types/CourseType.type";
 import { useCoursesContext } from "../../hooks/useCoursesContext";
 
 function Main() {
@@ -16,6 +17,21 @@ function Main() {
     });
   });
   
+  // function Main() {
+  //   const [courses, setCourses] = useState<Array<CourseType>>([]);
+  
+  //   useEffect(() => {
+  //     getCourses().then((allCourses) => {
+  //       const courses = Object.values(allCourses);
+  //       setCourses(courses);
+  //     })
+  //     .catch(() => {
+  //       console.log("Не удалось загрузить данные, попробуйте позже.");
+  //     });
+  //   }, []);
+    
+
+
   return (
     <div className="container">
       <div className="flex flex-row mt-2 md:mt-16 h-30 gap-4">
